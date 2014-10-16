@@ -1,0 +1,288 @@
+@import compass
+@import font/awesome
+@import sticky-footer
+// .container
+// 	width: 1040px !important
+// .header, .index .fotorama, .footer
+// 	min-width: 1040px !important
+
+// BASE
+
+// typography
+h1, h2, h3, h4, h5, h6
+	margin-top: 0 !important
+h1, h2, h3, h4, h5, h6
+	@media (max-width: 480px)
+		text-align: center
+h2
+	@media (max-width: 480px)
+		font-size: 24px
+p
+	font-size: 16px
+
+li.divider
+	background-color: #999 !important
+	opacity: 0.5 !important
+
+.btn
+	@media (max-width: 480px)
+		font-size: 14px
+// header
+.header
+	border-bottom: 1px solid #777
+	margin-bottom: 30px
+	.navbar
+		margin-bottom: 0
+	.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus
+		background-color: rgba(0, 0, 0, 0.15)
+	.dropdown-menu
+		background: rgba(255, 255, 255, 0.9)
+	.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus
+		background-color: rgba(0, 0, 0, 0.15)
+.navbar-middle
+	@media (min-width: 768px) and (max-width: 1200px)
+		float: none !important
+.nav>li>a
+	@media (min-width: 768px) and (max-width: 1000px)
+		padding: 15px 10px
+.navbar
+	background: rgba(255, 255, 255, 0.8)
+	border: none
+	+border-radius(0px)
+	.navbar-right
+		margin-bottom: 10px
+		li
+			a
+				padding: 0 10px
+			&:last-child
+				a
+					padding-right: 0
+	img
+		+opacity(.8)
+		height: 30px
+		margin-top: 9px
+		@media (max-width: 767px)
+			margin-left: 10px
+		&:hover
+			+opacity(1)
+.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus
+	background-color: #ddd
+.fbook
+	background: #fff
+
+.article
+	background: #fff
+	+border-radius(4px)
+	.content 
+	span
+		margin-bottom: 15px
+		width: 38%
+		&.pull-left
+			margin-right: 15px
+			> img
+				width: 100%
+		&.pull-right
+			margin-left: 15px
+			> img
+				width: 100%
+	@media (min-width: 481px) and (max-width: 800px)
+		span.pull-right, span.pull-left
+			width: 45%
+	@media (max-width: 480px)
+		span.pull-right, span.pull-left
+			float: none !important
+			margin-left: 0 !important
+			width: 100%
+	textarea
+		resize: none
+//	.content span.pull-right
+//		display: block
+//		width: 500px
+//		margin-bottom: 12px
+//		margin-left: 12px
+//		> img
+//			width: 100%
+//		@media (max-width: 800px)
+//			float: none !important
+//			margin-left: 0
+//			width: 100%
+//	.content span.pull-left
+//		display: block
+//		width: 500px
+//		margin-bottom: 12px
+//		margin-right: 12px
+//		> img
+//			width: 100%
+//		@media (max-width: 800px)
+//			float: none !important
+//			margin-right: 0
+//			width: 100%
+//	.content span.pull-center
+//		display: block
+//		max-width: 500px
+//		> img
+//			width: 100%
+//		margin: 0 auto
+
+hr
+	border-top: 1px solid #777
+	margin-top: 40px
+	margin-bottom: 40px
+
+.fotorama
+	margin-bottom: 20px
+
+// footer
+.footer
+	padding: 55px 0 30px
+	margin-top: 40px
+	background: #DEDEDE
+	position: relative
+	&::before
+		position: absolute
+		content: ''
+		pointer-events: none
+		left: 0
+		background-size: 200px 100%
+		top: 0
+		width: 100%
+		height: 29px
+		background-size: 65px 100%
+		background-image: linear-gradient(40deg, #DEDEDE 50%, #ffffff 50%)
+		background-position: 0px
+		transition: background-position 2s ease
+	&:hover
+		&::before
+			background-position: 500px
+			transition: background-position 2s ease
+
+
+// PAGES
+// index
+.main-page, .main-page-2
+	.header
+		position: absolute
+		z-index: 5000
+		width: 100vw
+		border-bottom: none
+		margin-bottom: 0
+		.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus
+			background-color: rgba(0, 0, 0, 0.15)
+		.dropdown-menu
+			background: rgba(255, 255, 255, 0.8)
+		.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus
+			background-color: rgba(0, 0, 0, 0.15)
+	.fotorama
+//		margin-top: 50px
+		margin-bottom: 40px
+
+
+// index2.html
+.main-page-2
+	.header
+		position: absolute
+		z-index: 5000
+		width: 100vw
+		border-bottom: none
+		margin-bottom: 0
+		.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus
+			background-color: rgba(0, 0, 0, 0.15)
+		.dropdown-menu
+			background: rgba(255, 255, 255, 0.8)
+		.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus
+			background-color: rgba(0, 0, 0, 0.15)
+	.fotorama
+		margin-bottom: 40px
+	.container
+		.flex-wrap
+			display: flex
+			margin-left: -20px
+			margin-right: -20px
+			.article
+				padding: 20px
+				margin: 0 20px 0 0
+				background: #eee
+			.news
+				flex: 1 0 300px
+				padding: 20px
+				background: #eee
+				hr
+					margin-top: 0
+					margin-bottom: 20px
+				.news-item
+					border-bottom: 1px dashed #666
+					margin-bottom: 15px
+					&:last-child
+						border-bottom: none
+					img
+						width: 100%
+						margin-bottom: 10px
+						&.pull-left
+							width: 130px
+							margin: 0 10px 0 0
+					p
+						color: #333
+						font-size: 14px
+					a:hover
+						text-decoration: none
+			@media (max-width: 599px)
+				display: block
+				.article
+					margin: 0 0 40px 0
+				.news-item
+					img
+						max-width: 300px
+			@media (max-width: 799px)
+				.news
+					flex: 1 0 220px
+
+// equipment
+.multicolumn
+	.thumbnail
+		text-align: center
+		margin: 15px !important
+		img
+			margin-bottom: 10px
+			width: auto
+		.thumbnail-text
+			min-height: 40px
+			min-width: 100%
+			@media (min-width: 768px)
+				display: block
+
+// creativity
+.creativity
+	// background: #fff
+	// +border-radius(4px)
+	// padding: 10px 20px
+	.image
+		width: 40%
+		margin-left: 20px
+		img
+			margin-bottom: 5px
+			width: 100%
+	h2
+		margin-bottom: 20px
+	@media (min-width: 481px) and (max-width: 800px)
+		.image
+			width: 45%
+			p
+				font-size: 12px
+		.media-body
+			overflow: visible
+	@media (max-width: 480px)
+		.image
+			float: none !important
+			margin-left: 0
+			width: 100%
+			p
+				font-size: 12px
+
+//residents
+.residents
+	dl
+		dt
+			width: auto
+			margin-right: 10px
+		dd
+			margin-left: 0

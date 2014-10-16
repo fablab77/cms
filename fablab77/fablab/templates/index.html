@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %}Фаблаб Москва{% endblock %}
+{% load cms_tags staticfiles sekizai_tags menu_tags %}
+{% block className %}main-page{% endblock %}
+{% block content %}
+
+{% placeholder "slideshow" %}
+
+<div class="container">
+	<article class="article">
+		<section class="top-article">
+			{% placeholder "content" %}
+		</section>
+	</article>
+</div>
+{% endblock %}

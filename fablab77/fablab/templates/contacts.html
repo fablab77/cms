@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% load cms_tags staticfiles sekizai_tags menu_tags %}
+
+{% block content %}
+<article class="article container">
+	<div class="content">
+		<h2> {% page_attribute "page_title" %} </h2>
+		<address class="row">
+			<div class="col-md-5">
+				{% placeholder "contacts" %}
+			</div>
+			<div class="col-md-6">
+				{% placeholder "map" %}
+			</div>
+		</address>
+	</div>
+	<div class="content access">
+		<hr>
+				{% placeholder "content" %}
+	</div>
+</article>
+{% endblock %}

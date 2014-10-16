@@ -1,0 +1,11 @@
+{% if link %}
+<a href="{{ link }}" class="thumbnail">
+    <img src="{{ object.image.url }}" alt="{{ object.title }}"/>
+    <span class="thumbnail-text">{{ object.title }}</span>
+</a>
+{% else %}
+<div class="thumbnail">
+    <img src="{{ object.image.url }}" alt="{{ object.title }}"/>
+    <span class="thumbnail-text">{{ object.title }}</span>
+</div>
+{% endif %}
